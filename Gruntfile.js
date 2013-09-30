@@ -16,13 +16,21 @@ module.exports = function(grunt) {
           'out/js/concat.js': ['js/jquery-1.10.2.min.js', 'js/main.js']
         }
       }
+    },
+    html_minify: {
+      compile: {
+        files: {
+          'out/index.html': 'index.html'
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-html-minify');
 
   // Default task(s).
-  grunt.registerTask('default', ['stylus', 'uglify']);
+  grunt.registerTask('default', ['stylus', 'uglify', 'html_minify']);
 
 };
