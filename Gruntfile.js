@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   // Project configuration.
-  var jsFiles = ['js/jquery-1.10.2.min.js', 'js/main.js', 'out/js/templates.js'];
+  var jsFiles = ['js/jquery-1.10.2.min.js', 'out/js/json.js', 'js/main.js', 'out/js/templates.js'];
   var jsDest = 'out/js/concat.js';
 
   var uglifyFiles = {};
@@ -47,6 +47,13 @@ module.exports = function(grunt) {
           'out/js/templates.js': 'templates/*.dot'
         }
       }
+    },
+    concatJSON: {
+      compile: {
+        files: {
+          'out/js/json.js': 'json/*.json'
+        }
+      }
     }
   });
 
@@ -56,9 +63,22 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-dot');
+  
+  grunt.task.registerMultiTask('concatJSON', 'Concats .json files into one js file', function() {
+    var json = [],
+      dest = this.files[0].dest,
+      counter = 0;
+    this.filesSrc.forEach(function(file) {
+      var name = file.match(/([^\\\/\.]+).json/)[1];
+      json.push(name + ': ' + JSON.stringify(grunt.file.readJSON(file)));
+      ++counter;
+    });
+    grunt.file.write(dest, 'var jsonData = {\n' + json.join(',\n') + '\n};');
+    grunt.log.writeln('File "' + dest + '" with ' + counter + ' json files created.');
+  });
 
   // Default task(s).
-  grunt.registerTask('default', ['stylus', 'dot', 'concat', 'copy']);
-  grunt.registerTask('production', ['stylus', 'dot', 'uglify', 'html_minify']);
+  grunt.registerTask('default', ['stylus', 'dot', 'concatJSON', 'concat', 'copy']);
+  grunt.registerTask('production', ['stylus', 'dot', 'concatJSON', 'uglify', 'html_minify']);
 
 };
