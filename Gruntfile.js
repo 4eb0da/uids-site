@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   // Project configuration.
-  var jsFiles = ['js/jquery-1.10.2.min.js', 'js/main.js'];
+  var jsFiles = ['js/jquery-1.10.2.min.js', 'js/main.js', 'out/js/templates.js'];
   var jsDest = 'out/js/concat.js';
 
   var uglifyFiles = {};
@@ -40,6 +40,13 @@ module.exports = function(grunt) {
       compile: {
         files: htmlFiles
       }
+    },
+    dot: {
+      compile: {
+        files: {
+          'out/js/templates.js': 'templates/*.dot'
+        }
+      }
     }
   });
 
@@ -48,9 +55,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-html-minify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-dot');
 
   // Default task(s).
-  grunt.registerTask('default', ['stylus', 'concat', 'copy']);
-  grunt.registerTask('production', ['stylus', 'uglify', 'html_minify']);
+  grunt.registerTask('default', ['stylus', 'dot', 'concat', 'copy']);
+  grunt.registerTask('production', ['stylus', 'dot', 'uglify', 'html_minify']);
 
 };

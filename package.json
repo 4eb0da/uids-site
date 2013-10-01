@@ -10,6 +10,7 @@
     "grunt-contrib-uglify": "0.2.x",
     "grunt-html-minify": "0.3.x",
     "grunt-contrib-concat": "0.3.x",
-    "grunt-contrib-copy": "0.4.x"
+    "grunt-contrib-copy": "0.4.x",
+    "grunt-dot": "0.1.x"
   }
 }
