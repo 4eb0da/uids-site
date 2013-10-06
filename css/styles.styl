@@ -1,5 +1,6 @@
 menuHoverColor = #d7d7d7
 menuSelectedColor = #ccc
+linkColor = #2A4EFF
 
 transition()
   -moz-transition: arguments
@@ -23,7 +24,6 @@ body
 
 .menu
   height: 40px
-  margin-bottom: 10px
   background: #ccc
   background: rgba(200, 200, 200, 0.3)
 
@@ -40,3 +40,17 @@ body
   
   &.menu-item-selected
     background: menuSelectedColor
+
+.content-data
+    padding: 10px 10px 0 10px
+    background: #eee
+
+.about-title
+    margin-top: 0
+
+.link
+    color: linkColor
+    text-decoration: underline
+
+.link:hover
+    text-decoration: none
