@@ -44,6 +44,7 @@ $(function(){
 
   function menuItemClick(hash, event) {
     if (event.button === 0) {
+      event.preventDefault();
       historyManager.goTo(hash);
     }
   }
