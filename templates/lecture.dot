@@ -1,0 +1,9 @@
+<div class="lecture-view">
+    <h2 class="lecture-view-title">{{= it.title }}</h2>
+    <div class="lecture-view-author">{{= it.lecturer }}</div>
+    <div class="lecture-view-desc">{{= it.description }}</div>
+    <a class="link" href="{{= it.presentation_static_url }}">Скачать презентацию</a>
+    <a class="link" href="{{= it.video_static_url }}">Скачать видео</a>
+    <iframe src="{{= it.video_url }}"></iframe>
+    <iframe src="{{= it.presentation_url }}"></iframe>
+</div>
