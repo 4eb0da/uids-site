@@ -1,7 +1,14 @@
 module.exports = function(grunt) {
 
   // Project configuration.
-  var jsFiles = ['js/jquery-1.10.2.min.js', 'out/js/json.js', 'js/main.js', 'out/js/templates.js'];
+  var jsFiles = [
+    'js/jquery-1.10.2.min.js',
+    'out/js/json.js',
+    'js/crossbrowser.js',
+    'js/history-manager.js',
+    'js/main.js',
+    'out/js/templates.js'
+  ];
   var jsDest = 'out/js/concat.js';
 
   var uglifyFiles = {};
@@ -32,12 +39,6 @@ module.exports = function(grunt) {
         files: uglifyFiles
       }
     },
-    concat: {
-      compile: {
-        src: jsFiles,
-        dest: jsDest
-      }
-    },
     html_minify: {
       compile: {
         files: htmlFiles
@@ -65,6 +66,11 @@ module.exports = function(grunt) {
         }
       }
     },
+    concatJS: {
+      compile: {
+        files: uglifyFiles
+      }
+    },
     imagemin: {
       compile: {
         files: imgFiles
@@ -75,7 +81,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-html-minify');
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-dot');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -93,8 +98,20 @@ module.exports = function(grunt) {
     grunt.log.writeln('File "' + dest + '" with ' + counter + ' json files created.');
   });
 
+  grunt.task.registerMultiTask('concatJS', 'Concats all .js files into one', function() {
+    var dest = this.files[0].dest,
+      res = '',
+      counter = 0;
+    this.filesSrc.forEach(function(file) {
+      res += grunt.file.read(file);
+      ++counter;
+    });
+    grunt.file.write(dest, '(function() {\n"use strict";\n' + res + '\n})();');
+    grunt.log.writeln('File "' + dest + '" with ' + counter + ' js files created.');
+  });
+
   // Default task(s).
-  grunt.registerTask('default', ['stylus', 'dot', 'concatJSON', 'concat', 'copy:html', 'copy:img']);
-  grunt.registerTask('production', ['stylus', 'dot', 'concatJSON', 'uglify', 'html_minify', 'imagemin']);
+  grunt.registerTask('default', ['stylus', 'dot', 'concatJSON', 'concatJS', 'copy:html', 'copy:img']);
+  grunt.registerTask('production', ['stylus', 'dot', 'concatJSON', 'concatJS', 'uglify', 'html_minify', 'imagemin']);
 
 };
