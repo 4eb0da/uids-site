@@ -29,6 +29,7 @@ $(function(){
 
   function showLectures() {
     selectMenuItem(menuItems.lectures);
+    content.html(templates.lectures(jsonData.lectures));
   }
 
   function showStudents() {
