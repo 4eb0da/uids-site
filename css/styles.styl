@@ -1,12 +1,14 @@
-menuHoverColor = #ddd
-menuSelectedColor = #bbb
-menuBorderColor = #bbb
+menuHoverColor = #d7d7d7
+menuSelectedColor = #ccc
 
 transition()
   -moz-transition: arguments
   -webkit-transition: arguments
   -ms-transition: arguments
   transition: arguments
+
+html
+  background: url('/img/bg.png')
 
 html, body
   padding: 0
@@ -17,11 +19,13 @@ body
   font-size: 14px
 
 .content
-  padding: 10%
+  padding: 50px 10%
 
 .menu
   height: 40px
   margin-bottom: 10px
+  background: #ccc
+  background: rgba(200, 200, 200, 0.3)
 
 .menu-item
   display: inline-block
