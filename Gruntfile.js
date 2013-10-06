@@ -36,7 +36,9 @@ module.exports = function(grunt) {
     },
     uglify: {
       compile: {
-        files: uglifyFiles
+        files: {
+          'out/js/concat.js': 'out/js/concat.js'
+        }
       }
     },
     html_minify: {
