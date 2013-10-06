@@ -10,8 +10,8 @@ $(function(){
     historyManager,
     menuItems = {
       about: $('#about'),
-      students: $('#students'),
-      lectures: $('#lectures')
+      lectures: $('#lectures'),
+      students: $('#students')
     },
     selectedMenuItem = menuItems.about;
 
@@ -27,19 +27,19 @@ $(function(){
     content.html(templates.about());
   }
 
-  function showStudents() {
-    selectMenuItem(menuItems.students);
-  }
-
   function showLectures() {
     selectMenuItem(menuItems.lectures);
+  }
+
+  function showStudents() {
+    selectMenuItem(menuItems.students);
   }
 
   function initHistory() {
     historyManager = new HistoryManager();
     historyManager.setDefaultState(showAbout);
-    historyManager.addState(/students/, showStudents);
     historyManager.addState(/lectures/, showLectures);
+    historyManager.addState(/students/, showStudents);
   }
 
   function menuItemClick(hash, event) {
@@ -50,8 +50,8 @@ $(function(){
 
   function initMenu() {
     menuItems.about.on('click', menuItemClick.bind(undefined, ''));
-    menuItems.students.on('click', menuItemClick.bind(undefined, 'students'));
     menuItems.lectures.on('click', menuItemClick.bind(undefined, 'lectures'));
+    menuItems.students.on('click', menuItemClick.bind(undefined, 'students'));
   }
 
   function init() {
