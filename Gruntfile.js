@@ -11,6 +11,13 @@ module.exports = function(grunt) {
     'out/index.html': 'index.html'
   };
 
+  var imgFiles = [{
+    expand: true,
+    cwd: 'img/',
+    src: ['**.{png,jpg,gif}'],
+    dest: 'out/img'
+  }];
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     stylus: {
@@ -37,8 +44,11 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      compile: {
+      html: {
         files: htmlFiles
+      },
+      img: {
+        files: imgFiles
       }
     },
     dot: {
@@ -54,6 +64,11 @@ module.exports = function(grunt) {
           'out/js/json.js': 'json/*.json'
         }
       }
+    },
+    imagemin: {
+      compile: {
+        files: imgFiles
+      }
     }
   });
 
@@ -63,6 +78,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-dot');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   
   grunt.task.registerMultiTask('concatJSON', 'Concats .json files into one js file', function() {
     var json = [],
@@ -78,7 +94,7 @@ module.exports = function(grunt) {
   });
 
   // Default task(s).
-  grunt.registerTask('default', ['stylus', 'dot', 'concatJSON', 'concat', 'copy']);
-  grunt.registerTask('production', ['stylus', 'dot', 'concatJSON', 'uglify', 'html_minify']);
+  grunt.registerTask('default', ['stylus', 'dot', 'concatJSON', 'concat', 'copy:html', 'copy:img']);
+  grunt.registerTask('production', ['stylus', 'dot', 'concatJSON', 'uglify', 'html_minify', 'imagemin']);
 
 };
