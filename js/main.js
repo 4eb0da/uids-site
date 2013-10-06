@@ -1,6 +1,6 @@
 var templates,
   define = function(dotTemplates) {
-  templates = dotTemplates();
+  templates = dotTemplates().templates;
 };
 
 $(function(){
@@ -24,6 +24,7 @@ $(function(){
 
   function showAbout() {
     selectMenuItem(menuItems.about);
+    content.html(templates.about());
   }
 
   function showStudents() {
