@@ -1,0 +1,18 @@
+<div class="lecture-view">
+    <h2 class="lecture-view-title">{{= it.title }}</h2>
+    <div class="lecture-view-author">{{= it.lecturer }}</div>
+    <img class="lecture-view-avatar" src="{{= it.avatar }}" alt="avatar"/>
+    <div class="lecture-view-desc">{{= it.description }}</div>
+    <div class="lecture-view-link">
+        <a class="link" href="{{= it.presentation_static_url }}">Скачать презентацию</a>
+    </div>
+    <div class="lecture-view-link">
+        <a class="link" href="{{= it.video_static_url }}">Скачать видео</a>
+    </div>
+    <div class="lecture-iframe-outer">
+        <iframe class="lecture-iframe" src="{{= it.video_url }}"></iframe>
+    </div>
+    <div class="lecture-iframe-outer">
+        <iframe class="lecture-iframe" src="{{= it.presentation_url }}"></iframe>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+{{~ it : lecture : id }}
+  <a class="lecture" data-id="{{= id }}" href="#lecture/{{= id }}">
+      <img class="lecture-avatar" src="{{= lecture.avatar }}" alt="avatar">
+      <div class="lecture-content">
+          <div class="lecture-title">{{= lecture.title }}</div>
+          <div class="lecture-author">{{= lecture.lecturer }}</div>
+      </div>
+  </a>
+{{~}}

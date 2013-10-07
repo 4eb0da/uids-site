@@ -29,6 +29,17 @@ $(function(){
 
   function showLectures() {
     selectMenuItem(menuItems.lectures);
+    content.html(templates.lectures(jsonData.lectures));
+  }
+
+  function extractLectureId(hash) {
+    return hash.match(/lecture\/(\d+)/)[1];
+  }
+
+  function showLecture(hash) {
+    var id = extractLectureId(hash);
+    selectMenuItem(menuItems.lectures);
+    content.html(templates.lecture(jsonData.lectures[id]));
   }
 
   function showStudents() {
@@ -39,6 +50,7 @@ $(function(){
     historyManager = new HistoryManager();
     historyManager.setDefaultState(showAbout);
     historyManager.addState(/lectures/, showLectures);
+    historyManager.addState(/lecture\/\d+/, showLecture);
     historyManager.addState(/students/, showStudents);
   }
 
@@ -49,15 +61,26 @@ $(function(){
     }
   }
 
+  function lectureClick(event) {
+    if (event.button === 0) {
+      historyManager.goTo($(event.target).closest('.lecture').attr('href'));
+    }
+  }
+
   function initMenu() {
     menuItems.about.on('click', menuItemClick.bind(undefined, ''));
     menuItems.lectures.on('click', menuItemClick.bind(undefined, 'lectures'));
     menuItems.students.on('click', menuItemClick.bind(undefined, 'students'));
   }
 
+  function initEvents() {
+    content.on('click', '.lecture', lectureClick);
+  }
+
   function init() {
     initHistory();
     initMenu();
+    initEvents();
   }
 
   function start() {
