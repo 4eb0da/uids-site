@@ -36,6 +36,10 @@ $(function(){
     return hash.match(/lecture\/(\d+)/)[1];
   }
 
+  function extractStudentId(hash) {
+    return hash.match(/student\/(\d+)/)[1];
+  }
+
   function showLecture(hash) {
     var id = extractLectureId(hash);
     selectMenuItem(menuItems.lectures);
@@ -47,12 +51,19 @@ $(function(){
     content.html(templates.students(jsonData.students));
   }
 
+  function showStudent(hash) {
+    var id = extractStudentId(hash);
+    selectMenuItem(menuItems.students);
+    content.html(templates.student(jsonData.students[id]));
+  }
+
   function initHistory() {
     historyManager = new HistoryManager();
     historyManager.setDefaultState(showAbout);
     historyManager.addState(/lectures/, showLectures);
     historyManager.addState(/lecture\/\d+/, showLecture);
     historyManager.addState(/students/, showStudents);
+    historyManager.addState(/student\/\d+/, showStudent);
   }
 
   function menuItemClick(hash, event) {
@@ -68,6 +79,12 @@ $(function(){
     }
   }
 
+  function studentClick(event) {
+    if (event.button === 0) {
+      historyManager.goTo($(event.target).closest('.student').attr('href'));
+    }
+  }
+
   function initMenu() {
     menuItems.about.on('click', menuItemClick.bind(undefined, ''));
     menuItems.lectures.on('click', menuItemClick.bind(undefined, 'lectures'));
@@ -76,6 +93,7 @@ $(function(){
 
   function initEvents() {
     content.on('click', '.lecture', lectureClick);
+    content.on('click', '.student', studentClick);
   }
 
   function init() {
