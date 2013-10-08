@@ -44,6 +44,7 @@ $(function(){
 
   function showStudents() {
     selectMenuItem(menuItems.students);
+    content.html(templates.students(jsonData.students));
   }
 
   function initHistory() {
