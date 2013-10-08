@@ -1,6 +1,7 @@
 menuHoverColor = #d7d7d7
-menuSelectedColor = #ccc
+menuSelectedColor = #f7f7f7
 linkColor = #2A4EFF
+generalShadow = 0 0 5px rgba(0, 0, 0, 0.6)
 
 transition()
   -moz-transition: arguments
@@ -23,12 +24,15 @@ body
   clear: both
 
 .content
-  padding: 50px 10%
+  margin: 50px 10%
+  box-shadow: generalShadow
+  overflow: hidden
 
 .menu
   height: 40px
-  background: #ccc
-  background: rgba(200, 200, 200, 0.3)
+  background: #eee
+  background: rgba(255, 255, 255, 0.6)
+  overflow: hidden
 
 .menu-item
   display: inline-block
@@ -36,19 +40,20 @@ body
   height: 40px
   line-height: 40px
   cursor: pointer
-  padding: 0 10px
+  padding: 0 20px
   
   &:hover
-    background: menuHoverColor
+    background: rgba(200, 200, 200, 0.5)
   
   &.menu-item-selected
+    position: relative
     background: menuSelectedColor
+    box-shadow: generalShadow
 
 .content-data
-  background: #eee
-
-.about-block
-  padding: 10px 10px 0 10px
+  padding: 10px
+  background: #f7f7f7
+  box-shadow: generalShadow
 
 .about-title
   margin-top: 0
@@ -61,8 +66,8 @@ body
   text-decoration: none
 
 .lecture
-  display: block
   padding: 10px
+  display: block
   cursor: pointer
   color: #000
   text-decoration: none
@@ -83,9 +88,6 @@ body
 .lecture-title
   font-size: 120%
   line-height: 34px
-
-.lecture-view
-  padding: 10px
 
 .lecture-view-title
   margin-top: 0
@@ -130,6 +132,7 @@ body
 .student-avatar
   width: 60px
   border: none
+  vertical-align: middle
 
 .student-view
   padding: 10px

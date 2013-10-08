@@ -26,4 +26,5 @@
     </div>
     <h4 class="student-view-about-title">About</h4>
     <div class="student-view-about">{{= it.about }}</div>
+    <div class="clear"></div>
 </div>
