@@ -1,0 +1,29 @@
+<div class="student-view">
+    <img class="student-view-avatar" src="{{= it.link_photo }}" alt="photo">
+    <h2 class="student-view-name">{{= it.name }}</h2>
+    <div class="student-view-city">{{= it.city }}</div>
+    <div class="student-view-links">
+        {{? it.link_vk }}
+            <div class="student-view-link">
+                <a class="link student-vk" href="{{! it.link_vk }}">Vk</a>
+            </div>
+        {{?}}
+        {{? it.link_facebook }}
+            <div class="student-view-link">
+                <a class="link student-facebook" href="{{! it.link_facebook }}">Facebook</a>
+            </div>
+        {{?}}
+        {{? it.link_gihub }}
+            <div class="student-view-link">
+                <a class="link student-github" href="{{! it.link_gihub }}">Github</a>
+            </div>
+        {{?}}
+        {{? it.link_yaru }}
+            <div class="student-view-link">
+                <a class="link student-yaru" href="{{! it.link_yaru }}">ya.ru</a>
+            </div>
+        {{?}}
+    </div>
+    <h4 class="student-view-about-title">About</h4>
+    <div class="student-view-about">{{= it.about }}</div>
+</div>

@@ -61,10 +61,25 @@ module.exports = function(grunt) {
         }
       }
     },
+    transformJSON: {
+      compile: {
+        files: {
+          'out/json/students.json': 'json/students.json',
+          'out/json/lectures.json': 'json/lectures.json'
+        },
+        fields: [
+          'link_photo',
+          'link_facebook',
+          'link_vk',
+          'link_gihub',
+          'link_yaru'
+        ]
+      }
+    },
     concatJSON: {
       compile: {
         files: {
-          'out/js/json.js': 'json/*.json'
+          'out/js/json.js': 'out/json/*.json'
         }
       }
     },
@@ -87,12 +102,37 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-dot');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   
+  grunt.task.registerMultiTask('transformJSON', 'Transforms links in json', function() {
+    var fields = this.data.fields,
+      dest,
+      src,
+      json;
+    this.files.forEach(function(files) {
+      dest = files.dest;
+      src = files.src[0];
+      json = grunt.file.readJSON(src);
+      json.forEach(function(item) {
+        fields.forEach(function(field) {
+          var value;
+          if (item.hasOwnProperty(field)) {
+            value = item[field];
+            if (value.substring(0, 4) !== 'http' && value.charAt(0) !== '/') {
+              item[field] = '//' + value;
+            }
+          }
+        });
+      });
+    });
+    grunt.file.write(dest, JSON.stringify(json));
+    grunt.log.writeln('Transform ' + this.files.length + ' json files ended successfully.');
+  });
+  
   grunt.task.registerMultiTask('concatJSON', 'Concats .json files into one js file', function() {
     var json = [],
       dest = this.files[0].dest,
       counter = 0;
     this.filesSrc.forEach(function(file) {
-      var name = file.match(/([^\\\/\.]+).json/)[1];
+      var name = file.match(/([^\\\/\.]+)\.json/)[1];
       json.push(name + ': ' + JSON.stringify(grunt.file.readJSON(file)));
       ++counter;
     });
@@ -113,7 +153,7 @@ module.exports = function(grunt) {
   });
 
   // Default task(s).
-  grunt.registerTask('default', ['stylus', 'dot', 'concatJSON', 'concatJS', 'copy:html', 'copy:img']);
-  grunt.registerTask('production', ['stylus', 'dot', 'concatJSON', 'concatJS', 'uglify', 'html_minify', 'imagemin']);
+  grunt.registerTask('default', ['stylus', 'dot', 'transformJSON', 'concatJSON', 'concatJS', 'copy:html', 'copy:img']);
+  grunt.registerTask('production', ['stylus', 'dot', 'transformJSON', 'concatJSON', 'concatJS', 'uglify', 'html_minify', 'imagemin']);
 
 };
