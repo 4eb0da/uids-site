@@ -20,13 +20,13 @@ $(function(){
   function showAbout() {
     selectMenuItem(menuItems.about);
     content.html(templates.about());
-    document.title = 'About SHRI - SHRI 2013';
+    document.title = 'О ШРИ - ШРИ 2013';
   }
 
   function showLectures() {
     selectMenuItem(menuItems.lectures);
     content.html(templates.lectures(jsonData.lectures));
-    document.title = 'Lectures - SHRI 2013';
+    document.title = 'Лекции - ШРИ 2013';
   }
 
   function extractLectureId(hash) {
@@ -41,20 +41,20 @@ $(function(){
     var id = extractLectureId(hash);
     selectMenuItem(menuItems.lectures);
     content.html(templates.lecture(jsonData.lectures[id]));
-    document.title = jsonData.lectures[id].title + ' - SHRI 2013';
+    document.title = jsonData.lectures[id].title + ' - ШРИ 2013';
   }
 
   function showStudents() {
     selectMenuItem(menuItems.students);
     content.html(templates.students(jsonData.students));
-    document.title = 'Students - SHRI 2013';
+    document.title = 'Студенты - ШРИ 2013';
   }
 
   function showStudent(hash) {
     var id = extractStudentId(hash);
     selectMenuItem(menuItems.students);
     content.html(templates.student(jsonData.students[id]));
-    document.title = jsonData.students[id].name + ' - SHRI 2013';
+    document.title = jsonData.students[id].name + ' - ШРИ 2013';
   }
 
   function initHistory() {
