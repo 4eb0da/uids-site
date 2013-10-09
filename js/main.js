@@ -1,8 +1,3 @@
-var templates,
-  define = function(dotTemplates) {
-  templates = dotTemplates().templates;
-};
-
 $(function(){
 	"use strict";
 

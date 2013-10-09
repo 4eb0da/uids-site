@@ -11,7 +11,7 @@
     "grunt-html-minify": "0.3.x",
     "grunt-contrib-copy": "0.4.x",
     "dot": "1.0.x",
-    "grunt-dot": "0.1.x",
+    "tosource": "~0.1.1",
     "grunt-contrib-imagemin": "0.3.x"
   }
 }

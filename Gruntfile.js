@@ -6,8 +6,8 @@ module.exports = function(grunt) {
     'out/js/json.js',
     'js/crossbrowser.js',
     'js/history-manager.js',
-    'js/main.js',
-    'out/js/templates.js'
+    'out/js/templates.js',
+    'js/main.js'
   ];
   var jsDest = 'out/js/concat.js';
 
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
         files: imgFiles
       }
     },
-    dot: {
+    compileDot: {
       compile: {
         files: {
           'out/js/templates.js': 'templates/*.dot'
@@ -122,8 +122,8 @@ module.exports = function(grunt) {
           }
         });
       });
+      grunt.file.write(dest, JSON.stringify(json));
     });
-    grunt.file.write(dest, JSON.stringify(json));
     grunt.log.writeln('Transform ' + this.files.length + ' json files ended successfully.');
   });
   
@@ -152,8 +152,25 @@ module.exports = function(grunt) {
     grunt.log.writeln('File "' + dest + '" with ' + counter + ' js files created.');
   });
 
+  grunt.task.registerMultiTask('compileDot', 'Compiles dot templates into one js file', function() {
+    var dot = require('dot'),
+      toSource = require('tosource'),
+      dest = this.files[0].dest,
+      res = {},
+      counter = 0;
+    dot.templateSettings.selfcontained = true;
+    this.filesSrc.forEach(function(file) {
+      var func = dot.template(grunt.file.read(file)),
+        name = file.match(/([^\\\/\.]+)\.dot/)[1];
+      res[name] = func;
+      ++counter;
+    });
+    grunt.file.write(dest, 'var templates = ' + toSource(res) + ';');
+    grunt.log.writeln('File "' + dest + '" with ' + counter + ' templates created.');
+  });
+
   // Default task(s).
-  grunt.registerTask('default', ['stylus', 'dot', 'transformJSON', 'concatJSON', 'concatJS', 'copy:html', 'copy:img']);
-  grunt.registerTask('production', ['stylus', 'dot', 'transformJSON', 'concatJSON', 'concatJS', 'uglify', 'html_minify', 'imagemin']);
+  grunt.registerTask('default', ['stylus', 'compileDot', 'transformJSON', 'concatJSON', 'concatJS', 'copy:html', 'copy:img']);
+  grunt.registerTask('production', ['stylus', 'compileDot', 'transformJSON', 'concatJSON', 'concatJS', 'uglify', 'html_minify', 'imagemin']);
 
 };
