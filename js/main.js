@@ -51,10 +51,11 @@ $(function(){
   }
 
   function showStudent(hash) {
-    var id = extractStudentId(hash);
+    var id = extractStudentId(hash),
+      student = jsonData.students[id];
     selectMenuItem(menuItems.students);
-    content.html(templates.student(jsonData.students[id]));
-    document.title = jsonData.students[id].name + ' - ШРИ 2013';
+    content.html(templates.student(student));
+    document.title = student.first_name + ' ' + student.last_name + ' - ШРИ 2013';
   }
 
   function initHistory() {
