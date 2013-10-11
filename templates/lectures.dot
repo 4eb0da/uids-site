@@ -3,7 +3,7 @@
       <img class="lecture-avatar" src="{{= lecture.avatar }}" alt="avatar">
       <div class="lecture-content">
           <div class="lecture-title">{{= lecture.title }}</div>
-          <div class="lecture-author">{{= lecture.lecturer }}</div>
+          <div class="lecture-author">{{= lecture.author }}</div>
       </div>
   </a>
 {{~}}
