@@ -1,6 +1,6 @@
 <div class="lecture-view">
     <h2 class="lecture-view-title">{{= it.title }}</h2>
-    <div class="lecture-view-author">{{= it.lecturer }}</div>
+    <div class="lecture-view-author">{{= it.author }}</div>
     <img class="lecture-view-avatar" src="{{= it.avatar }}" alt="avatar"/>
     <div class="lecture-view-desc">{{= it.description }}</div>
     <div class="lecture-view-link">

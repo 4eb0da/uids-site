@@ -6,7 +6,7 @@ $('.hall-schedule__talk-name > .b-link').each(function() {
     success: function(res) {
       var html = $.parseHTML(res);
       var title = $('.title_type_h1:first', html).text();
-      var name = $('.username__name:first', html).text();
+      var author = $('.username__name:first', html).text();
       var avatar = $('.username__icon_type_big:first', html).css('background-image').match(/\(([^)]+)/)[1];
       var description = $('.static-text > p:first', html).text();
       var presentation_static_url = $('.static-text > p:eq(1) > a', html).attr('href');
@@ -15,7 +15,7 @@ $('.hall-schedule__talk-name > .b-link').each(function() {
       var presentation_url = $('.player:last', html).attr('src');
       result.push({
         title: title,
-        name: name,
+        author: author,
         avatar: avatar,
         description: description,
         presentation_static_url: presentation_static_url,
