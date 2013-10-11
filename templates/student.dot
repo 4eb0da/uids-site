@@ -1,6 +1,6 @@
 <div class="student-view">
     <img class="student-view-avatar" src="{{= it.link_photo }}" alt="photo">
-    <h2 class="student-view-name">{{= it.name }}</h2>
+    <h2 class="student-view-name">{{= it.first_name }} {{= it.last_name }}</h2>
     <div class="student-view-city">{{= it.city }}</div>
     <div class="student-view-links">
         {{? it.link_vk }}
@@ -24,7 +24,7 @@
             </div>
         {{?}}
     </div>
-    <h4 class="student-view-about-title">About</h4>
+    <h4 class="student-view-about-title">Описание</h4>
     <div class="student-view-about">{{= it.about }}</div>
     <div class="clear"></div>
 </div>
