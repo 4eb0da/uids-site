@@ -50,12 +50,48 @@ $(function(){
     document.title = 'Студенты - ШРИ 2013';
   }
 
+  function getCoords(event) {
+    var x = event.clientX,
+      y = event.clientY;
+    if (!x) {
+      var touch = event.originalEvent.touch || event.originalEvent.touches[0] ||
+        event.originalEvent.changedTouches[0];
+      if (touch) {
+        x = touch.pageX;
+        y = touch.pageY;
+      }
+    }
+    return {'x': x, 'y': y};
+  }
+
+  function touchMove(event) {
+    var x2 = getCoords(event).x;
+    deg += x2 - x;
+    x = x2;
+    $('.student-view-avatar').css('-webkit-filter', 'hue-rotate(' + deg + 'deg)');
+    return false;
+  }
+
+  function touchEnd() {
+    $(document).unbind('.touch');
+  }
+
+  var deg = 0;
+  var x = 0;
+  function touchStart(event) {
+    x = getCoords(event).x;
+    $(document).bind('touchmove.touch', touchMove);
+    $(document).bind('touchend.touch', touchEnd);
+  }
+
   function showStudent(hash) {
     var id = extractStudentId(hash),
       student = jsonData.students[id];
     selectMenuItem(menuItems.students);
     content.html(templates.student(student));
     document.title = student.first_name + ' ' + student.last_name + ' - ШРИ 2013';
+    deg = 0;
+    $('.student-view-avatar').bind('touchstart', touchStart);
   }
 
   function initHistory() {
