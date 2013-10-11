@@ -1,22 +1,23 @@
 [
   {
-    "title": "Редакторы кода",
-    "author": "Вячеслав Олиянчук",
-    "avatar": "http://avatars.yandex.net/get-yaevents/25fc32eb205312126e0ada8bd473dcfb/180x180",
-    "description": "Несколько простых и сильных аргументов в пользу того, что нужно знать про разные редакторы. Как, исходя из этого, выбрать подходящий. Практические советы из личного опыта использования редакторов на примере WebStorm и Vim.",
-    "presentation_static_url": "http://yadi.sk/d/f3CYmlG3nGSC",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/h4kt5t9a07.4101/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://video.yandex.ru/iframe/ya-events/h4kt5t9a07.4101/?player-type=custom&show-info=false&show-logo=false&hd=1"
+    "title": "Wiki",
+    "author": "Сергей Бережной",
+    "avatar": "http://avatars.yandex.net/get-yaevents/6f86dddab71637f463346f5ae0102339/180x180",
+    "description": "Существует много разных инструментов для создания и использования информации, вики — один из них. Общая концепция вики, без особой привязки к конкретной реализации.",
+    "presentation_static_url": "http://yadi.sk/d/7F9PuECdiq6G",
+    "video_static_url": "http://yadi.sk/d/4Etko8OJ0_uKr",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/gbzafvm3tx.5015/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15219727?rel=0"
   },
   {
-    "title": "Общий цикл разработки",
-    "author": "Михаил Трошев",
-    "avatar": "http://avatars.yandex.net/get-yaevents/1488780d5280b517a74341b323325d83/180x180",
-    "description": "Разработка сложных проектов всегда ведётся несколькими людьми и представляет собой сложный последовательный процесс. Подробно рассмотрен типичный процесс разработки и его основные модификации.",
-    "presentation_static_url": "http://yadi.sk/d/VDsJ4ZUBiq6u",
-    "video_static_url": "http://yadi.sk/d/PTKO5vzM0jDWz",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/zsas3v25bh.4614/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15219480?rel=0"
+    "title": "Браузеры",
+    "author": "Георгий Мостоловица",
+    "avatar": "http://avatars.yandex.net/get-yaevents/9c6a228a5196ef3cb1c73c9e06ab24b2/180x180",
+    "description": "Общая информация о браузерах: примерная схема работы, краткая история развития, а также способы достижения совместимости.",
+    "presentation_static_url": "http://yadi.sk/d/-VjNYqjTqTca",
+    "video_static_url": "http://yadi.sk/d/NMOTG5lEqZdM",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/hvbwev4zfw.3829/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15219958?rel=0"
   },
   {
     "title": "Командная строка Unix",
@@ -29,14 +30,14 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15219767?rel=0"
   },
   {
-    "title": "Wiki",
-    "author": "Сергей Бережной",
-    "avatar": "http://avatars.yandex.net/get-yaevents/6f86dddab71637f463346f5ae0102339/180x180",
-    "description": "Существует много разных инструментов для создания и использования информации, вики — один из них. Общая концепция вики, без особой привязки к конкретной реализации.",
-    "presentation_static_url": "http://yadi.sk/d/7F9PuECdiq6G",
-    "video_static_url": "http://yadi.sk/d/4Etko8OJ0_uKr",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/gbzafvm3tx.5015/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15219727?rel=0"
+    "title": "Общий цикл разработки",
+    "author": "Михаил Трошев",
+    "avatar": "http://avatars.yandex.net/get-yaevents/1488780d5280b517a74341b323325d83/180x180",
+    "description": "Разработка сложных проектов всегда ведётся несколькими людьми и представляет собой сложный последовательный процесс. Подробно рассмотрен типичный процесс разработки и его основные модификации.",
+    "presentation_static_url": "http://yadi.sk/d/VDsJ4ZUBiq6u",
+    "video_static_url": "http://yadi.sk/d/PTKO5vzM0jDWz",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/zsas3v25bh.4614/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15219480?rel=0"
   },
   {
     "title": "JavaScript: Базовые знания",
@@ -49,14 +50,24 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15438655?rel=0"
   },
   {
-    "title": "Браузеры",
-    "author": "Георгий Мостоловица",
-    "avatar": "http://avatars.yandex.net/get-yaevents/9c6a228a5196ef3cb1c73c9e06ab24b2/180x180",
-    "description": "Общая информация о браузерах: примерная схема работы, краткая история развития, а также способы достижения совместимости.",
-    "presentation_static_url": "http://yadi.sk/d/-VjNYqjTqTca",
-    "video_static_url": "http://yadi.sk/d/NMOTG5lEqZdM",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/hvbwev4zfw.3829/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15219958?rel=0"
+    "title": "Редакторы кода",
+    "author": "Вячеслав Олиянчук",
+    "avatar": "http://avatars.yandex.net/get-yaevents/25fc32eb205312126e0ada8bd473dcfb/180x180",
+    "description": "Несколько простых и сильных аргументов в пользу того, что нужно знать про разные редакторы. Как, исходя из этого, выбрать подходящий. Практические советы из личного опыта использования редакторов на примере WebStorm и Vim.",
+    "presentation_static_url": "",
+    "video_static_url": "http://yadi.sk/d/f3CYmlG3nGSC",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/h4kt5t9a07.4101/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": ""
+  },
+  {
+    "title": "Тестирование",
+    "author": "Марина Широчкина",
+    "avatar": "http://avatars.yandex.net/get-yaevents/384a444b0f7aecea2d967791365b2bc9/180x180",
+    "description": "Тестирование — это способ узнать о разнообразных проблемах, которые могут возникнуть во время разработки вашего проекта. В лекции рассмотрены различные виды тестирования и различные практики, которые позволят вам узнавать о проблемах заранее.",
+    "presentation_static_url": "http://yadi.sk/d/W7lDOetHqTWC",
+    "video_static_url": "http://yadi.sk/d/oNwA5A9NqZcc",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/xc8acgglq0.1103/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15221073?rel=0"
   },
   {
     "title": "Системы контроля версий",
@@ -79,16 +90,6 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15221096?rel=0"
   },
   {
-    "title": "Тестирование",
-    "author": "Марина Широчкина",
-    "avatar": "http://avatars.yandex.net/get-yaevents/384a444b0f7aecea2d967791365b2bc9/180x180",
-    "description": "Тестирование — это способ узнать о разнообразных проблемах, которые могут возникнуть во время разработки вашего проекта. В лекции рассмотрены различные виды тестирования и различные практики, которые позволят вам узнавать о проблемах заранее.",
-    "presentation_static_url": "http://yadi.sk/d/W7lDOetHqTWC",
-    "video_static_url": "http://yadi.sk/d/oNwA5A9NqZcc",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/xc8acgglq0.1103/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15221073?rel=0"
-  },
-  {
     "title": "Механизм работы браузера",
     "author": "Роман Комаров",
     "avatar": "http://avatars.yandex.net/get-yaevents/3f0ab39148c87aa23a907e850139e1c9/180x180",
@@ -109,6 +110,16 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15335226?rel=0"
   },
   {
+    "title": "Безопасность веб-приложений",
+    "author": "Тарас Иващенко",
+    "avatar": "http://avatars.yandex.net/get-yaevents/5e276342723793120da28e22e51047ae/180x180",
+    "description": "Подробный разбор самых популярных угроз и методов защиты безопасности веб-приложений (OWASP Top 10).",
+    "presentation_static_url": "http://yadi.sk/d/bo1OpD2Av3vC",
+    "video_static_url": "http://yadi.sk/d/64iYID6f0Wy-d",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/jftrj1t7eb.4928/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15335296?rel=0"
+  },
+  {
     "title": "Кеширование на клиенте и на сервере",
     "author": "Егор Львовский",
     "avatar": "http://avatars.yandex.net/get-yaevents/d882cba712a99e3e8b68808d8f1d540b/180x180",
@@ -119,14 +130,14 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15335270?rel=0"
   },
   {
-    "title": "Безопасность веб-приложений",
-    "author": "Тарас Иващенко",
-    "avatar": "http://avatars.yandex.net/get-yaevents/5e276342723793120da28e22e51047ae/180x180",
-    "description": "Подробный разбор самых популярных угроз и методов защиты безопасности веб-приложений (OWASP Top 10).",
-    "presentation_static_url": "http://yadi.sk/d/bo1OpD2Av3vC",
-    "video_static_url": "http://yadi.sk/d/64iYID6f0Wy-d",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/jftrj1t7eb.4928/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15335296?rel=0"
+    "title": "Языки программирования",
+    "author": "Алексей Войнов",
+    "avatar": "http://avatars.yandex.net/get-yaevents/5999eeeddda87438259988fa2c471614/180x180",
+    "description": "Существует значительно больше, чем один язык программирования, и даже больше, чем два. А есть ещё и такие языки, которые и языками с трудом можно назвать. Лекция посвящена тому, как не запутаться в существующем изобилии и зачем вообще смотреть на какие-то языки, кроме своего любимого.",
+    "presentation_static_url": "http://yadi.sk/d/LRpqvLuIv4UI",
+    "video_static_url": "http://yadi.sk/d/ejCNHIYE0zdUm",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/kifim7bgie.5006/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15438618?rel=0"
   },
   {
     "title": "JavaScript фреймворки",
@@ -139,26 +150,6 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15335342?rel=0"
   },
   {
-    "title": "БЭМ: история появления, принципы методологии, базовые понятия",
-    "author": "Владимир Варанкин",
-    "avatar": "http://avatars.yandex.net/get-yaevents/be00e4fe820b5c9273e59fbff4fe969b/180x180",
-    "description": "На примере мини-проекта разберем, как разбить страницу на блоки. Расскажем, для чего нужны уровни переопределения, какие есть инструменты для ускорения разработки и как правильный подход к работе помогает в дальнейшем развитии проекта.",
-    "presentation_static_url": "http://yadi.sk/d/105T-6Yh09LBT",
-    "video_static_url": "http://yadi.sk/d/9DtwZPs80m5yg",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/jftu0kucri.5015/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15336836?rel=0"
-  },
-  {
-    "title": "Дизайн интерфейсов",
-    "author": "Константин Горский",
-    "avatar": "http://avatars.yandex.net/get-yaevents/2fd29a3020dac159b07d8f16a7b4dcc9/180x180",
-    "description": "Чтобы продукт получался отличным, разработчикам интерфейсов важно задумываться о дизайне. Дизайн — это не только внешний вид, это вся совокупность впечатлений человека от использования продукта, а также важная часть процесса проектирования и создания продукта. Будет рассказано подробно о том, что такое дизайн, зачем об этом задумываться, из каких этапов состоит дизайн-процесс и что отличает хорошие интерфейсы.",
-    "presentation_static_url": "http://yadi.sk/d/OdcBA5SD0C_7x",
-    "video_static_url": "http://yadi.sk/d/0IUT-fBt0WmOs",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/ppv481t6fi.4910/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15336954?rel=0"
-  },
-  {
     "title": "jQuery",
     "author": "Алексей Бережной",
     "avatar": "http://avatars.yandex.net/get-yaevents/e39d3fcaea981cf918bf9f337e56feee/180x180",
@@ -167,6 +158,16 @@
     "video_static_url": "http://yadi.sk/d/optmwEXD09V0h",
     "video_url": "http://video.yandex.ru/iframe/ya-events/l5rnupt8g8.5023/?player-type=custom&show-info=false&show-logo=false&hd=1",
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15336629?rel=0"
+  },
+  {
+    "title": "БЭМ: история появления, принципы методологии, базовые понятия",
+    "author": "Владимир Варанкин",
+    "avatar": "http://avatars.yandex.net/get-yaevents/be00e4fe820b5c9273e59fbff4fe969b/180x180",
+    "description": "На примере мини-проекта разберем, как разбить страницу на блоки. Расскажем, для чего нужны уровни переопределения, какие есть инструменты для ускорения разработки и как правильный подход к работе помогает в дальнейшем развитии проекта.",
+    "presentation_static_url": "http://yadi.sk/d/105T-6Yh09LBT",
+    "video_static_url": "http://yadi.sk/d/9DtwZPs80m5yg",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/jftu0kucri.5015/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15336836?rel=0"
   },
   {
     "title": "Дизайн глазами разработчика",
@@ -179,6 +180,16 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15336964?rel=0"
   },
   {
+    "title": "Дизайн интерфейсов",
+    "author": "Константин Горский",
+    "avatar": "http://avatars.yandex.net/get-yaevents/2fd29a3020dac159b07d8f16a7b4dcc9/180x180",
+    "description": "Чтобы продукт получался отличным, разработчикам интерфейсов важно задумываться о дизайне. Дизайн — это не только внешний вид, это вся совокупность впечатлений человека от использования продукта, а также важная часть процесса проектирования и создания продукта. Будет рассказано подробно о том, что такое дизайн, зачем об этом задумываться, из каких этапов состоит дизайн-процесс и что отличает хорошие интерфейсы.",
+    "presentation_static_url": "http://yadi.sk/d/OdcBA5SD0C_7x",
+    "video_static_url": "http://yadi.sk/d/0IUT-fBt0WmOs",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/ppv481t6fi.4910/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15336954?rel=0"
+  },
+  {
     "title": "БЭМ: практика",
     "author": "Владимир Варанкин",
     "avatar": "http://avatars.yandex.net/get-yaevents/be00e4fe820b5c9273e59fbff4fe969b/180x180",
@@ -187,16 +198,6 @@
     "video_static_url": "http://yadi.sk/d/GB_sG64O0m5yM",
     "video_url": "http://video.yandex.ru/iframe/ya-events/bt0nb4y5iu.5029/?player-type=custom&show-info=false&show-logo=false&hd=1",
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15336891?rel=0"
-  },
-  {
-    "title": "Система ведения задач",
-    "author": "Сергей Бережной",
-    "avatar": "http://avatars.yandex.net/get-yaevents/6f86dddab71637f463346f5ae0102339/180x180",
-    "description": "Система ведения задач является одним из ключевых элементов современной разработки. В лекции рассказывается в целом про процесс работы с задачами, без привязки к конкретным инструментам. Даётся поверхностный обзор разных методологий и описываются базовые принципы.",
-    "presentation_static_url": "http://yadi.sk/d/D5xTwoIciq6c",
-    "video_static_url": "http://yadi.sk/d/yBn5qW470_u0Z",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/jr1h1fzqgo.5025/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15219612?rel=0"
   },
   {
     "title": "JavaScript: Асинхронность",
@@ -209,6 +210,16 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15438695?rel=0"
   },
   {
+    "title": "Система ведения задач",
+    "author": "Сергей Бережной",
+    "avatar": "http://avatars.yandex.net/get-yaevents/6f86dddab71637f463346f5ae0102339/180x180",
+    "description": "Система ведения задач является одним из ключевых элементов современной разработки. В лекции рассказывается в целом про процесс работы с задачами, без привязки к конкретным инструментам. Даётся поверхностный обзор разных методологий и описываются базовые принципы.",
+    "presentation_static_url": "http://yadi.sk/d/D5xTwoIciq6c",
+    "video_static_url": "http://yadi.sk/d/yBn5qW470_u0Z",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/jr1h1fzqgo.5025/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15219612?rel=0"
+  },
+  {
     "title": "CSS: Систематизация базовых знаний",
     "author": "Михаил Трошев",
     "avatar": "http://avatars.yandex.net/get-yaevents/1488780d5280b517a74341b323325d83/180x180",
@@ -217,16 +228,6 @@
     "video_static_url": "http://yadi.sk/d/QcWCfNoC09V85",
     "video_url": "http://video.yandex.ru/iframe/ya-events/178e2xaxvc.5101/?player-type=custom&show-info=false&show-logo=false&hd=1",
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15438731?rel=0"
-  },
-  {
-    "title": "Debugger: Отладка кода",
-    "author": "Алексей Андросов",
-    "avatar": "http://avatars.yandex.net/get-yaevents/ca4f0941d1e4dadeba715c8730ae1202/180x180",
-    "description": "Будет рассказано о доступных средствах по отладке веб-сайтов, их возможностях и способах использования. Также речь пойдет о том, как искать ошибки у пользователей в продакшене и контролировать качество продукта.",
-    "presentation_static_url": "http://yadi.sk/d/5fTEBWfu01pFQ",
-    "video_static_url": "http://yadi.sk/d/8UC4HjS10zeRA",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/4fxc9q6dh8.107/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15438783?rel=0"
   },
   {
     "title": "Profiler: Профилирование кода",
@@ -239,6 +240,16 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15438825?rel=0"
   },
   {
+    "title": "Регулярные выражения",
+    "author": "Максим Ширшин",
+    "avatar": "http://avatars.yandex.net/get-yaevents/e641e044ac6441d0336f0fafc46f5698/180x180",
+    "description": "Чем могут быть полезны регулярные выражения для разработчика интерфейсов? О каких возможностях следует знать больше? Где находятся «подводные камни» и как обойти их в различных реализациях? И, наконец, что делать, если возможностей встроенной реализации регулярных выражений недостаточно?",
+    "presentation_static_url": "http://yadi.sk/d/cPE_GA-w06Iag",
+    "video_static_url": "http://yadi.sk/d/wXPKtSKd09UuL",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/byx81cskrt.5114/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15438903?rel=0"
+  },
+  {
     "title": "Шаблонизаторы",
     "author": "Сергей Бережной",
     "avatar": "http://avatars.yandex.net/get-yaevents/6f86dddab71637f463346f5ae0102339/180x180",
@@ -249,14 +260,14 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15438871?rel=0"
   },
   {
-    "title": "Регулярные выражения",
-    "author": "Максим Ширшин",
-    "avatar": "http://avatars.yandex.net/get-yaevents/e641e044ac6441d0336f0fafc46f5698/180x180",
-    "description": "Чем могут быть полезны регулярные выражения для разработчика интерфейсов? О каких возможностях следует знать больше? Где находятся «подводные камни» и как обойти их в различных реализациях? И, наконец, что делать, если возможностей встроенной реализации регулярных выражений недостаточно?",
-    "presentation_static_url": "http://yadi.sk/d/cPE_GA-w06Iag",
-    "video_static_url": "http://yadi.sk/d/wXPKtSKd09UuL",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/byx81cskrt.5114/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15438903?rel=0"
+    "title": "Debugger: Отладка кода",
+    "author": "Алексей Андросов",
+    "avatar": "http://avatars.yandex.net/get-yaevents/ca4f0941d1e4dadeba715c8730ae1202/180x180",
+    "description": "Будет рассказано о доступных средствах по отладке веб-сайтов, их возможностях и способах использования. Также речь пойдет о том, как искать ошибки у пользователей в продакшене и контролировать качество продукта.",
+    "presentation_static_url": "http://yadi.sk/d/5fTEBWfu01pFQ",
+    "video_static_url": "http://yadi.sk/d/8UC4HjS10zeRA",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/4fxc9q6dh8.107/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15438783?rel=0"
   },
   {
     "title": "XML",
@@ -279,32 +290,14 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15481171?rel=0"
   },
   {
-    "title": "Транспорт, Ajax",
-    "author": "Михаил Давыдов",
-    "avatar": "http://avatars.yandex.net/get-yaevents/debc30e43d5782879b9e99c37f029289/180x180",
-    "description": "Клиент-сайд изобилует кучей различных транспортов, и зачастую непонятно, какой взять для решения той или иной задачи. Будут подробно рассмотрены особенности каждого транспорта и области их применимости.",
-    "presentation_static_url": "http://yadi.sk/d/QpvJjsHdw5Oq",
-    "video_static_url": "http://yadi.sk/d/A9dgW7uB0Wvpr",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/p48kxjhhnm.5118/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15483184?rel=0"
-  },
-  {
     "title": "CSS: Значения и единицы измерения. Шрифт. Свойства текста",
     "author": "Вадим Пацев",
     "avatar": "http://avatars.yandex.net/get-yaevents/77989b5fd0316790174ed596ae1e4adc/180x180",
     "description": "Лекция из двух частей. В первой рассматриваются возможные значения свойств в CSS. Вторая посвящена работе со шрифтом и текстовыми массивами.",
-    "presentation_static_url": "http://yadi.sk/d/LfRvFhcQ0tIER",
+    "presentation_static_url": "",
+    "video_static_url": "http://yadi.sk/d/LfRvFhcQ0tIER",
     "video_url": "http://video.yandex.ru/iframe/ya-events/nxzixzf16j.4707/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://video.yandex.ru/iframe/ya-events/nxzixzf16j.4707/?player-type=custom&show-info=false&show-logo=false&hd=1"
-  },
-  {
-    "title": "CSS: Селекторы, псевдоклассы. Специфичность и наследование",
-    "author": "Вадим Пацев",
-    "avatar": "http://avatars.yandex.net/get-yaevents/77989b5fd0316790174ed596ae1e4adc/180x180",
-    "description": "Подробно разбираются виды селекторов в CSS. Освещаются аспекты специфичности селекторов и механизм наследования свойств.",
-    "presentation_static_url": "http://yadi.sk/d/VVkhokTf0tI71",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/1917etfxx6.4126/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://video.yandex.ru/iframe/ya-events/1917etfxx6.4126/?player-type=custom&show-info=false&show-logo=false&hd=1"
+    "presentation_url": ""
   },
   {
     "title": "XSLT",
@@ -317,6 +310,26 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15481247?rel=0"
   },
   {
+    "title": "Транспорт, Ajax",
+    "author": "Михаил Давыдов",
+    "avatar": "http://avatars.yandex.net/get-yaevents/debc30e43d5782879b9e99c37f029289/180x180",
+    "description": "Клиент-сайд изобилует кучей различных транспортов, и зачастую непонятно, какой взять для решения той или иной задачи. Будут подробно рассмотрены особенности каждого транспорта и области их применимости.",
+    "presentation_static_url": "http://yadi.sk/d/QpvJjsHdw5Oq",
+    "video_static_url": "http://yadi.sk/d/A9dgW7uB0Wvpr",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/p48kxjhhnm.5118/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15483184?rel=0"
+  },
+  {
+    "title": "CSS: Основы модели визуального форматирования. margin, padding, border. Цвета и фон",
+    "author": "Вадим Пацев",
+    "avatar": "http://avatars.yandex.net/get-yaevents/77989b5fd0316790174ed596ae1e4adc/180x180",
+    "description": "Основная тема лекции – способы форматирования элементов на странице с помощью CSS. Подробно описываются свойства display, width, height, padding, margin и механизм работы браузера с этими свойствами в различных ситуациях.",
+    "presentation_static_url": "",
+    "video_static_url": "http://yadi.sk/d/cy7ZoLUe10nFX",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/wa9epocpia.2707/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": ""
+  },
+  {
     "title": "Парное программирование",
     "author": "Сергей Бережной",
     "avatar": "http://avatars.yandex.net/get-yaevents/6f86dddab71637f463346f5ae0102339/180x180",
@@ -327,40 +340,54 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/16158028?rel=0"
   },
   {
-    "title": "CSS: Основы модели визуального форматирования. margin, padding, border. Цвета и фон",
+    "title": "CSS: Селекторы, псевдоклассы. Специфичность и наследование",
     "author": "Вадим Пацев",
     "avatar": "http://avatars.yandex.net/get-yaevents/77989b5fd0316790174ed596ae1e4adc/180x180",
-    "description": "Основная тема лекции – способы форматирования элементов на странице с помощью CSS. Подробно описываются свойства display, width, height, padding, margin и механизм работы браузера с этими свойствами в различных ситуациях.",
-    "presentation_static_url": "http://yadi.sk/d/cy7ZoLUe10nFX",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/wa9epocpia.2707/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://video.yandex.ru/iframe/ya-events/wa9epocpia.2707/?player-type=custom&show-info=false&show-logo=false&hd=1"
+    "description": "Подробно разбираются виды селекторов в CSS. Освещаются аспекты специфичности селекторов и механизм наследования свойств.",
+    "presentation_static_url": "",
+    "video_static_url": "http://yadi.sk/d/VVkhokTf0tI71",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/1917etfxx6.4126/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": ""
   },
   {
     "title": "CSS: Списки и генерируемое содержимое. Layouts. At-rules",
     "author": "Вадим Пацев",
     "avatar": "http://avatars.yandex.net/get-yaevents/77989b5fd0316790174ed596ae1e4adc/180x180",
     "description": "Рассматриваются разные техники решения задач, служащих для построения раскладки страницы. Также освещаются различные аспекты работы со списками и механизм @media.",
-    "presentation_static_url": "http://yadi.sk/d/rzeyqEHm1Emyi",
+    "presentation_static_url": "",
+    "video_static_url": "http://yadi.sk/d/rzeyqEHm1Emyi",
     "video_url": "http://video.yandex.ru/iframe/ya-events/b2rtf7s057.1705/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://video.yandex.ru/iframe/ya-events/b2rtf7s057.1705/?player-type=custom&show-info=false&show-logo=false&hd=1"
+    "presentation_url": ""
   },
   {
     "title": "CSS: Свободное перемещение и позиционирование",
     "author": "Вадим Пацев",
     "avatar": "http://avatars.yandex.net/get-yaevents/77989b5fd0316790174ed596ae1e4adc/180x180",
     "description": "Основная тема лекции – свойства position, float. Рассказывается про способы позиционирования элементов на странице с помощью CSS.",
-    "presentation_static_url": "http://yadi.sk/d/48dUsz5W10nOJ",
+    "presentation_static_url": "",
+    "video_static_url": "http://yadi.sk/d/48dUsz5W10nOJ",
     "video_url": "http://video.yandex.ru/iframe/ya-events/zkscrgjlqt.4626/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://video.yandex.ru/iframe/ya-events/zkscrgjlqt.4626/?player-type=custom&show-info=false&show-logo=false&hd=1"
+    "presentation_url": ""
   },
   {
     "title": "CSS: Transition. Transfrom. Animation",
     "author": "Вадим Пацев",
     "avatar": "http://avatars.yandex.net/get-yaevents/77989b5fd0316790174ed596ae1e4adc/180x180",
     "description": "Рассказывается про визуальные и анимационные возможности CSS3. ",
-    "presentation_static_url": "http://yadi.sk/d/wRMbLpqX1En1I",
+    "presentation_static_url": "",
+    "video_static_url": "http://yadi.sk/d/wRMbLpqX1En1I",
     "video_url": "http://video.yandex.ru/iframe/ya-events/j0bv2zd138.604/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://video.yandex.ru/iframe/ya-events/j0bv2zd138.604/?player-type=custom&show-info=false&show-logo=false&hd=1"
+    "presentation_url": ""
+  },
+  {
+    "title": "JavaScript: События",
+    "author": "Михаил Давыдов",
+    "avatar": "http://avatars.yandex.net/get-yaevents/debc30e43d5782879b9e99c37f029289/180x180",
+    "description": "Событийная модель. Базовые паттерны: PubSub, EventEmitter и EventManager. Дополнительные возможности для упрощения работы с событиями: namespace, событие с накоплением. Управление потоком событий и их фильтрация:  trottle, debounce. События на DOM и Делегирование событий. Применение событийной модели для событийного ввода-вывода и организации скелета event-driven приложения.",
+    "presentation_static_url": "http://yadi.sk/d/HO78CQZJ0tPzA",
+    "video_static_url": "http://yadi.sk/d/r5A9H4iu16YxG",
+    "video_url": "http://video.yandex.ru/iframe/ya-events/5xwclfsnbg.4200/?player-type=custom&show-info=false&show-logo=false&hd=1",
+    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/16158635?rel=0"
   },
   {
     "title": "Code Style",
@@ -373,33 +400,13 @@
     "presentation_url": "http://www.slideshare.net/slideshow/embed_code/16158564?rel=0"
   },
   {
-    "title": "JavaScript: События",
-    "author": "Михаил Давыдов",
-    "avatar": "http://avatars.yandex.net/get-yaevents/debc30e43d5782879b9e99c37f029289/180x180",
-    "description": "Событийная модель. Базовые паттерны: PubSub, EventEmitter и EventManager. Дополнительные возможности для упрощения работы с событиями: authorspace, событие с накоплением. Управление потоком событий и их фильтрация:  trottle, debounce. События на DOM и Делегирование событий. Применение событийной модели для событийного ввода-вывода и организации скелета event-driven приложения.",
-    "presentation_static_url": "http://yadi.sk/d/HO78CQZJ0tPzA",
-    "video_static_url": "http://yadi.sk/d/r5A9H4iu16YxG",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/5xwclfsnbg.4200/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/16158635?rel=0"
-  },
-  {
     "title": "Клиентская оптимизация",
     "author": "Иван Карев",
     "avatar": "http://avatars.yandex.net/get-yaevents/746329dd0b679f198f64be4cd1f98f40/180x180",
     "description": "Попробуем взглянуть на страницу глазами пользователей и понять, что можно сделать для ускорения ее загрузки. Рассмотрим основные оптимизации на стороне браузера, познакомимся с инструментами для измерения времени отображения.",
-    "presentation_static_url": "http://yadi.sk/d/S3dVJJdL01pTk",
-    "video_static_url": "http://yadi.sk/d/sSgcmt1309Uo1",
+    "presentation_static_url": "",
+    "video_static_url": "http://yadi.sk/d/S3dVJJdL01pTk",
     "video_url": "http://video.yandex.ru/iframe/ya-events/0o9slrv1re.4622/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://video.yandex.ru/iframe/ya-events/0o9slrv1re.4622/?player-type=custom&show-info=false&show-logo=false&hd=1"
-  },
-  {
-    "title": "Языки программирования",
-    "author": "Алексей Войнов",
-    "avatar": "http://avatars.yandex.net/get-yaevents/5999eeeddda87438259988fa2c471614/180x180",
-    "description": "Существует значительно больше, чем один язык программирования, и даже больше, чем два. А есть ещё и такие языки, которые и языками с трудом можно назвать. Лекция посвящена тому, как не запутаться в существующем изобилии и зачем вообще смотреть на какие-то языки, кроме своего любимого.",
-    "presentation_static_url": "http://yadi.sk/d/LRpqvLuIv4UI",
-    "video_static_url": "http://yadi.sk/d/ejCNHIYE0zdUm",
-    "video_url": "http://video.yandex.ru/iframe/ya-events/kifim7bgie.5006/?player-type=custom&show-info=false&show-logo=false&hd=1",
-    "presentation_url": "http://www.slideshare.net/slideshow/embed_code/15438618?rel=0"
+    "presentation_url": ""
   }
 ]

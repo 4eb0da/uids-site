@@ -12,7 +12,12 @@ $('.hall-schedule__talk-name > .b-link').each(function() {
       var presentation_static_url = $('.static-text > p:eq(1) > a', html).attr('href');
       var video_static_url = $('.static-text > p:eq(2) > a', html).attr('href');
       var video_url = $('.player:first', html).attr('src');
-      var presentation_url = $('.player:last', html).attr('src');
+      var presentation_url = $('.player:eq(1)', html).attr('src');
+      if (!presentation_url) {
+        presentation_url = '';
+        video_static_url = presentation_static_url;
+        presentation_static_url = '';
+      }
       result.push({
         title: title,
         author: author,
