@@ -29,6 +29,17 @@ $(function(){
     document.title = 'Лекции - ШРИ 2013';
   }
 
+  var lecturesCommands = {
+    'up': function() {
+      ;
+    },
+    'down': function() {
+      ;
+    },
+    'leftSection': showAbout,
+    'rightSection': showStudents
+  };
+
   function extractLectureId(hash) {
     return hash.match(/lecture\/(\d+)/)[1];
   }
@@ -60,7 +71,7 @@ $(function(){
   function initHistory() {
     historyManager = new HistoryManager();
     historyManager.setDefaultState(showAbout);
-    historyManager.addState(/lectures/, showLectures);
+    historyManager.addState(/lectures/, showLectures, lecturesCommands);
     historyManager.addState(/lecture\/\d+/, showLecture);
     historyManager.addState(/students/, showStudents);
     historyManager.addState(/student\/\d+/, showStudent);
