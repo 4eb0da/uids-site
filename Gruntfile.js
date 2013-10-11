@@ -95,79 +95,13 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadTasks('tasks');
   grunt.loadNpmTasks('grunt-contrib-stylus');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-html-minify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-dot');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  
-  grunt.task.registerMultiTask('transformJSON', 'Transforms links in json', function() {
-    var fields = this.data.fields,
-      dest,
-      src,
-      json;
-    this.files.forEach(function(files) {
-      dest = files.dest;
-      src = files.src[0];
-      json = grunt.file.readJSON(src);
-      json.forEach(function(item) {
-        fields.forEach(function(field) {
-          var value;
-          if (item.hasOwnProperty(field)) {
-            value = item[field];
-            if (value.substring(0, 4) !== 'http' && value.charAt(0) !== '/') {
-              item[field] = '//' + value;
-            }
-          }
-        });
-      });
-      grunt.file.write(dest, JSON.stringify(json));
-    });
-    grunt.log.writeln('Transform ' + this.files.length + ' json files ended successfully.');
-  });
-  
-  grunt.task.registerMultiTask('concatJSON', 'Concats .json files into one js file', function() {
-    var json = [],
-      dest = this.files[0].dest,
-      counter = 0;
-    this.filesSrc.forEach(function(file) {
-      var name = file.match(/([^\\\/\.]+)\.json/)[1];
-      json.push(name + ': ' + JSON.stringify(grunt.file.readJSON(file)));
-      ++counter;
-    });
-    grunt.file.write(dest, 'var jsonData = {\n' + json.join(',\n') + '\n};');
-    grunt.log.writeln('File "' + dest + '" with ' + counter + ' json files created.');
-  });
-
-  grunt.task.registerMultiTask('concatJS', 'Concats all .js files into one', function() {
-    var dest = this.files[0].dest,
-      res = '',
-      counter = 0;
-    this.filesSrc.forEach(function(file) {
-      res += grunt.file.read(file);
-      ++counter;
-    });
-    grunt.file.write(dest, '(function() {\n"use strict";\n' + res + '\n})();');
-    grunt.log.writeln('File "' + dest + '" with ' + counter + ' js files created.');
-  });
-
-  grunt.task.registerMultiTask('compileDot', 'Compiles dot templates into one js file', function() {
-    var dot = require('dot'),
-      toSource = require('tosource'),
-      dest = this.files[0].dest,
-      res = {},
-      counter = 0;
-    dot.templateSettings.selfcontained = true;
-    this.filesSrc.forEach(function(file) {
-      var func = dot.template(grunt.file.read(file)),
-        name = file.match(/([^\\\/\.]+)\.dot/)[1];
-      res[name] = func;
-      ++counter;
-    });
-    grunt.file.write(dest, 'var templates = ' + toSource(res) + ';');
-    grunt.log.writeln('File "' + dest + '" with ' + counter + ' templates created.');
-  });
 
   // Default task(s).
   grunt.registerTask('default', ['stylus', 'compileDot', 'transformJSON', 'concatJSON', 'concatJS', 'copy:html', 'copy:img']);
