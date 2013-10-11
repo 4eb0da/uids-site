@@ -1,3 +1,6 @@
+<div class="button-back button-back-student">
+    &lt; Вернуться к списку
+</div>
 <div class="student-view">
     <img class="student-view-avatar" src="{{= it.link_photo }}" alt="photo">
     <h2 class="student-view-name">{{= it.first_name }} {{= it.last_name }}</h2>

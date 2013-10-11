@@ -86,6 +86,16 @@ $(function(){
     }
   }
 
+  function backClick(event) {
+    if (event.button === 0) {
+      if ($(event.target).hasClass('button-back-student')) {
+        historyManager.goTo('students');
+      } else {
+        historyManager.goTo('lectures');
+      }
+    }
+  }
+
   function initMenu() {
     menuItems.about.on('click', menuItemClick.bind(undefined, ''));
     menuItems.lectures.on('click', menuItemClick.bind(undefined, 'lectures'));
@@ -95,6 +105,7 @@ $(function(){
   function initEvents() {
     content.on('click', '.lecture', lectureClick);
     content.on('click', '.student', studentClick);
+    content.on('click', '.button-back', backClick);
   }
 
   function init() {

@@ -1,3 +1,6 @@
+<div class="button-back button-back-lecture">
+    &lt; Вернуться к списку
+</div>
 <div class="lecture-view">
     <h2 class="lecture-view-title">{{= it.title }}</h2>
     <div class="lecture-view-author">{{= it.author }}</div>
