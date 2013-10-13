@@ -158,14 +158,24 @@ $(function() {
   function studentClick(event) {
     if (event.button === 0) {
       historyManager.goTo($(event.target).closest('.student').attr('href'));
+      return false;
     }
+    return true;
+  }
+
+  /**
+   * Переход на страницу со списком студентов
+   * @returns {Boolean}
+   */
+  function goToStudents() {
+    historyManager.goTo('students');
+    return false;
   }
 
   /**
    * Инициализация
    */
   function init() {
-    var goToStudents = historyManager.goTo.bind(historyManager, 'students');
     $menuItems.students.on('click', goToStudents);
     $content.on('click', '.button-back-student', goToStudents);
     $content.on('click', '.student', studentClick);
