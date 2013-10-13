@@ -12,14 +12,17 @@ module.exports = function(grunt) {
     var totalCount = 0;
     var imagesCount = 0;
     var done = this.async();
+    var avatars = [];
 
     var MAX_SIZE = 150;
     var largePath = __dirname + '/../work/img/students-large/';
     var smallPath = __dirname + '/../work/img/students-small/';
+    var jsonPath = __dirname + '/../work/json/avatars.json';
 
     function increaseCount() {
       process.nextTick(function() {
         if (++counter === totalCount) {
+          grunt.file.write(jsonPath, JSON.stringify(avatars));
           grunt.log.writeln('Created ' + imagesCount + ' images');
           done(true);
         }
@@ -30,6 +33,7 @@ module.exports = function(grunt) {
       grunt.file.mkdir(smallPath);
       students.forEach(function (student, index) {
         var avatar = student.link_photo;
+        avatars[index] = {};
         if (!avatar) {
           grunt.log.writeln('No avatar: ' + index);
           return;
@@ -53,11 +57,14 @@ module.exports = function(grunt) {
           }
           var filePath = path.normalize(largePath + index + '.' + extension);
           grunt.file.write(filePath, result.buffer);
+          avatars[index].large = 'img/students-large/' + index + '.' + extension;
           ++imagesCount;
           ++totalCount;
           im.identify(filePath, function(err, info) {
             increaseCount();
-            var scale = 1;
+            var scale = 1,
+              smallWidth,
+              smallHeight;
             if (err) {
               console.log(err);
               return;
@@ -67,17 +74,22 @@ module.exports = function(grunt) {
             } else {
               scale = MAX_SIZE / info.height;
             }
+            smallWidth = Math.round(info.width * scale);
+            smallHeight = Math.round(info.height * scale);
             ++totalCount;
             im.resize({
               srcPath: filePath,
               dstPath: filePath.replace('students-large', 'students-small'),
-              width: Math.round(info.width * scale),
-              height: Math.round(info.height * scale)
+              width: smallWidth,
+              height: smallHeight
             }, function(err) {
               increaseCount();
               if (err) {
                 console.log(err);
               } else {
+                avatars[index].small = 'img/students-small/' + index + '.' + extension;
+                avatars[index].smallWidth = smallWidth;
+                avatars[index].smallHeight = smallHeight;
                 ++imagesCount;
               }
             });
