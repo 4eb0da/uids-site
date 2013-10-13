@@ -38,6 +38,9 @@ module.exports = function(grunt) {
         var avatar = student.link_photo;
         avatars[index] = {};
         if (!avatar) {
+          avatars[index].small = 'img/no_photo.png';
+          avatars[index].smallWidth = MAX_SIZE;
+          avatars[index].smallHeight = MAX_SIZE;
           grunt.log.writeln('No avatar: ' + index);
           return;
         }

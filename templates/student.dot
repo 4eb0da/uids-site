@@ -2,7 +2,7 @@
     &lt; Вернуться к списку
 </div>
 <div class="student-view">
-    <img class="student-view-avatar" src="{{= it.avatar_large }}" alt="photo">
+    <img class="student-view-avatar" src="{{= it.large_avatar }}" alt="photo">
     <h2 class="student-view-name">{{= it.first_name }} {{= it.last_name }}</h2>
     <div class="student-view-city">{{= it.city }}</div>
     <div class="student-view-links">
