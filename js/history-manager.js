@@ -43,7 +43,7 @@ var HistoryManager;
     var handler = this._changeHandler.bind(this);
     if ('onhashchange' in window) {
       $(window).on('hashchange', handler);
-    } else { //ie 7-?
+    } else { //ie 6-?
       setInterval(handler, HISTORY_UPDATE);
     }
   };
@@ -116,6 +116,7 @@ var HistoryManager;
     location.hash = hash;
     this._prevHash = hash;
     this._update(hash);
+    $(window).scrollTop(0);
   };
 
   /**
