@@ -18,10 +18,19 @@ $(function() {
   }
 
   /**
+   * Переход на страницу "about"
+   * @returns {Boolean}
+   */
+  function goToAbout() {
+    historyManager.goTo('');
+    return false;
+  }
+
+  /**
    * Инициализация
    */
   function init() {
-    $menuItems.about.on('click', historyManager.goTo.bind(historyManager, ''));
+    $menuItems.about.on('click', goToAbout);
     historyManager.setDefaultState(showAbout);
   }
 
