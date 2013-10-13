@@ -21,7 +21,7 @@ module.exports = function(grunt) {
   var imgFiles = [{
     expand: true,
     cwd: 'img/',
-    src: ['**.{png,jpg,gif}'],
+    src: ['**/*.{png,jpg,gif}'],
     dest: 'out/img'
   }];
 
@@ -92,6 +92,9 @@ module.exports = function(grunt) {
       compile: {
         files: imgFiles
       }
+    },
+    loadImages: {
+      compile: {}
     }
   });
 
