@@ -119,7 +119,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-html-minify');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-dot');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Default task(s).
