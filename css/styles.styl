@@ -1,0 +1,215 @@
+menuHoverColor = #d7d7d7
+menuSelectedColor = #f7f7f7
+linkColor = #2A4EFF
+generalShadow = 0 0 5px rgba(0, 0, 0, 0.6)
+
+transition()
+  -moz-transition: arguments
+  -webkit-transition: arguments
+  -ms-transition: arguments
+  transition: arguments
+
+html
+  background: url('/img/bg.png')
+  -webkit-text-size-adjust: 100%
+
+html, body
+  padding: 0
+  margin: 0
+
+body
+  font-family: "Segoe UI", "Droid Sans", sans-serif
+  font-size: 14px
+
+.clear
+  clear: both
+
+.content
+  margin: 50px 10%
+  box-shadow: generalShadow
+  overflow: hidden
+
+.menu
+  height: 40px
+  background: #eee
+  background: rgba(255, 255, 255, 0.6)
+  overflow: hidden
+
+.menu-item
+  display: inline-block
+  vertical-align: top
+  height: 40px
+  line-height: 40px
+  cursor: pointer
+  padding: 0 20px
+  text-decoration: none
+  color: #000
+  outline: none
+  
+  &:hover
+    background: rgba(200, 200, 200, 0.5)
+  
+  &.menu-item-selected
+    position: relative
+    background: menuSelectedColor
+    box-shadow: generalShadow
+
+.content-data
+  padding: 10px
+  background: #f7f7f7
+  box-shadow: generalShadow
+
+.about-title
+  margin-top: 0
+
+.link
+  color: linkColor
+  text-decoration: underline
+
+.link:hover
+  text-decoration: none
+
+.lecture
+  padding: 10px
+  display: block
+  cursor: pointer
+  color: #000
+  text-decoration: none
+
+.lecture:hover
+  background: menuHoverColor
+
+.lecture-avatar
+  width: 60px
+  height: 60px
+  float: left
+  border: none
+
+.lecture-content
+  margin-left: 70px
+  min-height: 60px
+
+.lecture-title
+  font-size: 120%
+  line-height: 34px
+
+.lecture-view
+  padding: 10px
+
+.lecture-view-title
+  margin-top: 0
+  margin-bottom: 5px
+
+.lecture-view-author
+  margin-bottom: 10px
+
+.lecture-view-avatar
+  border: none
+  margin-bottom: 25px
+
+.lecture-view-link
+  display: block
+  margin: 10px 0
+
+.lecture-iframe-outer
+  width: 100%
+  position: relative
+  margin-top: 20px
+
+.lecture-iframe-outer:after
+  padding-top: 56.25%
+  display: block
+  content: ''
+
+.lecture-iframe
+  position: absolute
+  top: 0
+  left: 0
+  border: none
+  width: 100%
+  height: 100%
+
+.student
+  padding: 3px
+  display: inline-block
+
+.student:hover
+  background: menuHoverColor
+
+.student-avatar
+  width: 60px
+  border: none
+  vertical-align: middle
+
+.student-view
+  padding: 10px
+
+.student-view-name
+  font-size: 120%
+  margin: 5px 0
+
+.student-view-city
+  margin-bottom: 15px
+
+.student-view-avatar
+  float: right
+  max-width: 50%
+  margin: 10px 0 10px 10px
+  border: none
+
+.student-view-links
+  font-size: 100%
+
+.student-view-links
+.student-view-link
+  margin: 5px 0
+
+.student-view-about-title
+  margin: 25px 0 5px 0
+
+.student-link
+  padding-left: 20px
+  background: url('../img/links.png') no-repeat
+  display: inline-block
+  line-height: 18px
+
+.student-vk
+  background-position 0 1px
+
+.student-facebook
+  background-position: 0 -19px
+
+.student-github
+  background-position: 0 -39px
+
+.student-yaru
+  background-position: 0 -59px
+
+.student-view-about
+  white-space: pre-wrap
+
+.button-back
+  line-height: 40px
+  padding: 0 15px
+  margin: 0 10px
+  overflow: hidden
+  cursor: pointer
+  background: #E6E6E6
+
+  &:hover
+    background: #d9d9d9
+
+
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px)
+  .content
+    margin: 0
+
+  .menu
+    position: fixed
+    top: 0
+    width: 100%
+    box-shadow: generalShadow
+
+  .content-data
+    padding-top: 50px

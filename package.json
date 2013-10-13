@@ -1,0 +1,20 @@
+{
+  "name": "uids-site",
+  "description": "Site about Yandex's ui development school",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "grunt": "0.4.x",
+    "grunt-contrib-stylus": "0.8.x",
+    "grunt-contrib-uglify": "0.2.x",
+    "grunt-html-minify": "0.3.x",
+    "grunt-contrib-copy": "0.4.x",
+    "dot": "1.0.x",
+    "tosource": "~0.1.1",
+    "grunt-contrib-imagemin": "0.3.x",
+    "http-get": "0.5.x",
+    "imagemagick": "0.1.x",
+    "process": "0.5.1"
+  }
+}

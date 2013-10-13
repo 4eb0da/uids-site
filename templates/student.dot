@@ -1,0 +1,33 @@
+<div class="button-back button-back-student">
+    &lt; Вернуться к списку
+</div>
+<div class="student-view">
+    <img class="student-view-avatar" src="{{= it.large_avatar }}" alt="photo">
+    <h2 class="student-view-name">{{= it.first_name }} {{= it.last_name }}</h2>
+    <div class="student-view-city">{{= it.city }}</div>
+    <div class="student-view-links">
+        {{? it.link_vk }}
+            <div class="student-view-link">
+                <a class="link student-link student-vk" href="{{! it.link_vk }}">Vk</a>
+            </div>
+        {{?}}
+        {{? it.link_facebook }}
+            <div class="student-view-link">
+                <a class="link student-link student-facebook" href="{{! it.link_facebook }}">Facebook</a>
+            </div>
+        {{?}}
+        {{? it.link_gihub }}
+            <div class="student-view-link">
+                <a class="link student-link student-github" href="{{! it.link_gihub }}">Github</a>
+            </div>
+        {{?}}
+        {{? it.link_yaru }}
+            <div class="student-view-link">
+                <a class="link student-link student-yaru" href="{{! it.link_yaru }}">ya.ru</a>
+            </div>
+        {{?}}
+    </div>
+    <h4 class="student-view-about-title">Описание</h4>
+    <div class="student-view-about">{{= it.about }}</div>
+    <div class="clear"></div>
+</div>

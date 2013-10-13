@@ -1,0 +1,5 @@
+<div class="student-list">
+    {{~ it : student : id }}<a class="student" data-id="{{= id }}" href="#student/{{= id }}" title="{{= student.first_name + ' ' + student.last_name }}">
+        <img class="student-avatar" src="{{= student.small_avatar }}" alt="avatar">
+    </a>{{~}}
+</div>
