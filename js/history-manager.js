@@ -2,6 +2,7 @@ var HISTORY_UPDATE = 100;
 function HistoryManager() {
   this._states = [];
   this._prevHash = this._normalizeHash(location.hash);
+  this._currentState = undefined;
   this._initListener();
 }
 
@@ -36,6 +37,10 @@ HistoryManager.prototype._update = function(hash) {
   for (i = 0, len = this._states.length; i < len; ++i) {
     state = this._states[i];
     if (state.regexp.test(hash)) {
+      if (this._currentState && this._currentState.outback) {
+        this._currentState.outback();
+      }
+      this._currentState = state;
       state.callback(hash);
       return;
     }
@@ -45,10 +50,11 @@ HistoryManager.prototype._update = function(hash) {
   }
 };
 
-HistoryManager.prototype.addState = function(regexp, callback) {
+HistoryManager.prototype.addState = function(regexp, callback, outback) {
   this._states.push({
     regexp: regexp,
-    callback: callback
+    callback: callback,
+    outback: outback
   });
 };
 

@@ -44,10 +44,86 @@ $(function(){
     document.title = jsonData.lectures[id].title + ' - ШРИ 2013';
   }
 
+  var MIN_HEIGHT = 100;
+  var MAX_HEIGHT = 150;
+  var PREFERRED_HEIGHT = 125;
+  var MARGIN = 6;
+  function setAvatarsHeight($avatars, start, end, height) {
+    var i,
+      student,
+      scale;
+    for (i = start; i < end; ++i) {
+      student = jsonData.students[i];
+      scale = height / student.avatar_height;
+      $avatars.eq(i)
+        .width(student.avatar_width * scale)
+        .height(student.avatar_height * scale);
+    }
+  }
+
+  function preferredSize(first, width, firstWidth, firstHeight) {
+    var sum = 0,
+      students = jsonData.students,
+      height = PREFERRED_HEIGHT,
+      count = first,
+      len = students.length,
+      i,
+      tempHeight,
+      availableWidth;
+    for (i = first + 1; i < len; ++i) {
+      availableWidth = width - (i - first + 1) * (MARGIN + 1);
+      sum += (students[i].avatar_width * firstHeight) / students[i].avatar_height;
+      tempHeight = availableWidth * firstHeight / (firstWidth + sum);
+      if (tempHeight >= MIN_HEIGHT && tempHeight <= MAX_HEIGHT) {
+        count = i;
+        height = tempHeight;
+      }
+    }
+    return [count, height];
+  }
+
+  function resizeAvatars() {
+    var first = 0,
+      len = jsonData.students.length,
+      width = content.children().eq(0).width(),
+      $avatars = content.find('img'),
+      count,
+      firstStudent,
+      preferred;
+    while (first < len) {
+      firstStudent = jsonData.students[first];
+      preferred = preferredSize(first, width, firstStudent.avatar_width, firstStudent.avatar_height);
+      count = preferred[0];
+      if (count > first) {
+        setAvatarsHeight($avatars, first, count + 1, preferred[1]);
+        first = count + 1;
+      } else {
+        setAvatarsHeight($avatars, first, len, PREFERRED_HEIGHT);
+        first = len;
+      }
+    }
+  }
+
+  function scrollChanged(func) {
+    var $win = $(window),
+      $body = $('body'),
+      hasScroll = $win.height() < $body.height();
+    func();
+    return hasScroll !== ($win.height() < $body.height());
+  }
+
   function showStudents() {
     selectMenuItem(menuItems.students);
     content.html(templates.students(jsonData.students));
+    if (scrollChanged(resizeAvatars)) {
+      resizeAvatars();
+    }
+    $(window).on('resize.students', resizeAvatars);
     document.title = 'Студенты - ШРИ 2013';
+  }
+
+  function hideStudents() {
+    $(window).off('.students');
   }
 
   function showStudent(hash) {
@@ -63,7 +139,7 @@ $(function(){
     historyManager.setDefaultState(showAbout);
     historyManager.addState(/lectures/, showLectures);
     historyManager.addState(/lecture\/\d+/, showLecture);
-    historyManager.addState(/students/, showStudents);
+    historyManager.addState(/students/, showStudents, hideStudents);
     historyManager.addState(/student\/\d+/, showStudent);
   }
 
