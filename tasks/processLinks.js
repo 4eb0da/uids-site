@@ -15,7 +15,7 @@ module.exports = function(grunt) {
           var value;
           if (item.hasOwnProperty(field)) {
             value = item[field];
-            if (value.substring(0, 4) !== 'http' && value.charAt(0) !== '/') {
+            if (value && value.substring(0, 4) !== 'http' && value.charAt(0) !== '/') {
               item[field] = '//' + value;
             }
           }
