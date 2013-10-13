@@ -48,11 +48,15 @@ $(function() {
     return true;
   }
 
+  function goToLectures() {
+    historyManager.goTo('lectures');
+    return false;
+  }
+
   /**
    * Инициализирует
    */
   function init() {
-    var goToLectures = historyManager.goTo.bind(historyManager, 'lectures');
     $menuItems.lectures.on('click', goToLectures);
     $content.on('click', '.button-back-lecture', goToLectures);
     $content.on('click', '.lecture', lectureClick);
