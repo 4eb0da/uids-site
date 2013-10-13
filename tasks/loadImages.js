@@ -14,15 +14,8 @@ module.exports = function(grunt) {
     var done = this.async();
 
     var MAX_SIZE = 150;
-    var largePath = __dirname + '/../img/students-large/';
-    var smallPath = __dirname + '/../img/students-small/';
-
-    if (!fs.existsSync(largePath)) {
-      fs.mkdirSync(largePath);
-    }
-    if (!fs.existsSync(smallPath)) {
-      fs.mkdirSync(smallPath);
-    }
+    var largePath = __dirname + '/../work/img/students-large/';
+    var smallPath = __dirname + '/../work/img/students-small/';
 
     function increaseCount() {
       process.nextTick(function() {
@@ -33,39 +26,34 @@ module.exports = function(grunt) {
       });
     }
 
-    students.forEach(function (student, index) {
-      var avatar = student.link_photo;
-      if (!avatar) {
-        console.log('No avatar', index);
-        return;
-      }
-      ++totalCount;
-      http.get({url: avatar, bufferType: 'buffer'}, function (err, result) {
-        increaseCount();
-        if (err) {
-          console.log(avatar, index, err);
+    if (!fs.existsSync(largePath)) {
+      grunt.file.mkdir(smallPath);
+      students.forEach(function (student, index) {
+        var avatar = student.link_photo;
+        if (!avatar) {
+          grunt.log.writeln('No avatar: ' + index);
           return;
         }
-        var contentType = result.headers['content-type'],
-          extension;
-        if (contentType === 'image/jpeg') {
-          extension = 'jpg';
-        } else if (contentType === 'image/png') {
-          extension = 'png';
-        } else {
-          console.log('Unknown content-type', contentType);
-          return;
-        }
-        var filePath = path.normalize(largePath + index + '.' + extension);
         ++totalCount;
-        fs.writeFile(filePath, result.buffer, function(err) {
+        http.get({url: avatar, bufferType: 'buffer'}, function (err, result) {
           increaseCount();
           if (err) {
-            console.log(err);
+            console.log(avatar, index, err);
             return;
           }
+          var contentType = result.headers['content-type'],
+            extension;
+          if (contentType === 'image/jpeg') {
+            extension = 'jpg';
+          } else if (contentType === 'image/png') {
+            extension = 'png';
+          } else {
+            console.log('Unknown content-type', contentType);
+            return;
+          }
+          var filePath = path.normalize(largePath + index + '.' + extension);
+          grunt.file.write(filePath, result.buffer);
           ++imagesCount;
-          console.log(filePath);
           ++totalCount;
           im.identify(filePath, function(err, info) {
             increaseCount();
@@ -96,6 +84,6 @@ module.exports = function(grunt) {
           });
         });
       });
-    });
+    }
   });
 };
