@@ -29,7 +29,10 @@ module.exports = function(grunt) {
       });
     }
 
-    if (!fs.existsSync(largePath)) {
+    if (fs.existsSync(largePath)) {
+      grunt.log.writeln('Already loaded all images');
+      done(true);
+    } else {
       grunt.file.mkdir(smallPath);
       students.forEach(function (student, index) {
         var avatar = student.link_photo;
