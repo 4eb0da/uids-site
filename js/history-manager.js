@@ -71,3 +71,5 @@ HistoryManager.prototype.goTo = function(hash) {
 HistoryManager.prototype.start = function() {
   this._update(this._prevHash);
 };
+
+var historyManager = new HistoryManager();

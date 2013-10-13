@@ -5,8 +5,12 @@ module.exports = function(grunt) {
     'js/jquery-1.10.2.min.js',
     'work/js/json.js',
     'js/crossbrowser.js',
-    'js/history-manager.js',
     'work/js/templates.js',
+    'js/history-manager.js',
+    'js/menu.js',
+    'js/about.js',
+    'js/lectures.js',
+    'js/students.js',
     'js/main.js'
   ];
   var jsDest = 'out/js/concat.js';
