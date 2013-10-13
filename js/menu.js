@@ -1,6 +1,9 @@
 var $menuItems;
 var selectMenuItem;
 
+/**
+ * Работает с меню
+ */
 $(function() {
   "use strict";
 
@@ -12,6 +15,10 @@ $(function() {
   };
   $selectedMenuItem = $menuItems.about;
 
+  /**
+   * Выделяет нужный пункт меню, выключает старый
+   * @param {jQuery} $item
+   */
   selectMenuItem = function($item) {
     if ($item !== $selectedMenuItem) {
       $selectedMenuItem.removeClass('menu-item-selected');

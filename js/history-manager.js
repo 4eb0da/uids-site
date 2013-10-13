@@ -1,10 +1,20 @@
 var HistoryManager;
 
+/**
+ * Модуль для работы с историей
+ */
 (function() {
   "use strict";
 
+  /**
+   * Интервал проверки изменения hash, для браузеров, которые не поддерживают onhashchange
+   */
   var HISTORY_UPDATE = 100;
 
+  /**
+   * Функция-конструктор класса
+   * @constructor
+   */
   HistoryManager = function() {
     this._states = [];
     this._prevHash = this._normalizeHash(location.hash);
@@ -12,6 +22,12 @@ var HistoryManager;
     this._initListener();
   };
 
+  /**
+   * Убирает решётку из строки, если она есть
+   * @param {String} hash
+   * @returns {String}
+   * @private
+   */
   HistoryManager.prototype._normalizeHash = function(hash) {
     if (hash.charAt(0) === '#') {
       return hash.substring(1);
@@ -19,6 +35,10 @@ var HistoryManager;
     return hash;
   };
 
+  /**
+   * Подписывается на изменения hash'а
+   * @private
+   */
   HistoryManager.prototype._initListener = function() {
     var handler = this._changeHandler.bind(this);
     if ('onhashchange' in window) {
@@ -28,6 +48,10 @@ var HistoryManager;
     }
   };
 
+  /**
+   * Обработчик изменения hash'а
+   * @private
+   */
   HistoryManager.prototype._changeHandler = function() {
     var hash = this._normalizeHash(location.hash);
     if (hash !== this._prevHash) {
@@ -36,6 +60,11 @@ var HistoryManager;
     }
   };
 
+  /**
+   * Находит нужное состояние, соответствующее hash'у
+   * @param {String} hash
+   * @private
+   */
   HistoryManager.prototype._update = function(hash) {
     var i,
       len,
@@ -56,6 +85,12 @@ var HistoryManager;
     }
   };
 
+  /**
+   * Добавляет состояние в список отслеживаемых
+   * @param {RegExp} regexp      Регулярное выражение, которому должен соответствовать hash
+   * @param {Function} callback  Функция, которая будет вызвана после перехода в состояние
+   * @param {Function} [outback] Функция, которая будет вызвана после выхода из состояния
+   */
   HistoryManager.prototype.addState = function(regexp, callback, outback) {
     this._states.push({
       regexp: regexp,
@@ -64,16 +99,28 @@ var HistoryManager;
     });
   };
 
+  /**
+   * Устанавливает состояние по-умолчанию.
+   * Если текущий hash не подходит ни под одно из известных состояний, то будет использовано это
+   * @param {Function} callback Функция, которая будет вызвана при переходе в состояние
+   */
   HistoryManager.prototype.setDefaultState = function(callback) {
     this._defaultState = callback;
   };
 
+  /**
+   * Использует указанный hash, переходит в состояние, которое соответствует ему
+   * @param {String} hash
+   */
   HistoryManager.prototype.goTo = function(hash) {
     location.hash = hash;
     this._prevHash = hash;
     this._update(hash);
   };
 
+  /**
+   * Выбирает подходящее состояние
+   */
   HistoryManager.prototype.start = function() {
     this._update(this._prevHash);
   };
