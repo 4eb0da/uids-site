@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
   "use strict";
 
-  grunt.task.registerMultiTask('transformJSON', 'Transforms links in json', function() {
+  grunt.task.registerMultiTask('processLinks', 'Transforms links in json', function() {
     var fields = this.data.fields,
       dest,
       src,

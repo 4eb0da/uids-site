@@ -71,10 +71,10 @@ module.exports = function(grunt) {
         }
       }
     },
-    transformJSON: {
+    processLinks: {
       compile: {
         files: {
-          'work/json/students.json': 'json/students.json'
+          'work/students.json': 'json/students.json'
         },
         fields: [
           'link_photo',
@@ -104,6 +104,9 @@ module.exports = function(grunt) {
     },
     loadImages: {
       compile: {}
+    },
+    mergeJSON: {
+      compile: {}
     }
   });
 
@@ -116,7 +119,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Default task(s).
-  grunt.registerTask('default', ['stylus', 'compileDot', 'transformJSON', 'copy:json', 'loadImages', 'concatJSON', 'concatJS', 'copy:html', 'copy:img']);
-  grunt.registerTask('production', ['stylus', 'compileDot', 'transformJSON', 'copy:json', 'loadImages', 'concatJSON', 'concatJS', 'uglify', 'html_minify', 'imagemin']);
+  grunt.registerTask('default', ['stylus', 'compileDot', 'processLinks', 'loadImages', 'mergeJSON', 'copy:json', 'concatJSON', 'concatJS', 'copy:html', 'copy:img']);
+  grunt.registerTask('production', ['stylus', 'compileDot', 'processLinks', 'loadImages', 'mergeJSON', 'copy:json', 'concatJSON', 'concatJS', 'uglify', 'html_minify', 'imagemin']);
 
 };

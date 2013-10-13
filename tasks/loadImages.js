@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     var MAX_SIZE = 150;
     var largePath = __dirname + '/../work/img/students-large/';
     var smallPath = __dirname + '/../work/img/students-small/';
-    var jsonPath = __dirname + '/../work/json/avatars.json';
+    var jsonPath = __dirname + '/../work/avatars.json';
 
     function increaseCount() {
       process.nextTick(function() {
